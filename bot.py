@@ -40,6 +40,18 @@ async def start_command(message:Message):
     except:
         await message.answer(text="Botdan foydalanishingiz mumkun !")
 
+#help commands
+@dp.message(Command("help"))
+async def help_commands(message:Message):
+    await message.answer("Sizga qanday yordam kerak")
+
+
+
+#about commands
+@dp.message(Command("about"))
+async def about_commands(message:Message):
+    await message.answer("Bu bot orqali kalkulyatorni ishlata olasiz")
+
 #calculator
 @dp.message(Command("calc"))
 async def open_calc_answer(message: Message):
